@@ -14,7 +14,11 @@ classDiagram
   note "the document"
   note for Report "the report"
 
+  class Key Images
   class Finding { <<Observation>>}
+  class Report
+  class Examination
+  
   Report <-- Order
   Report *-- Examination
   Report o-- Key Images: partOf
