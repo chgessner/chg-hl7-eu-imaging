@@ -4,10 +4,17 @@
 Hello world!
 
 ```mermaid
+---
+  config:
+    class:
+      hideEmptyMembersBox: true
+---
 classDiagram
   direction DT
+  note "the document"
 
   class Finding { <<Observation>>}
+  note "the findings"
   Report <-- Order: partOf
   Report <-- Examination: partOf
   Report <-- Key Images: partOf
