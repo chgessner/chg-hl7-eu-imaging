@@ -4,11 +4,16 @@
 Hello world!
 
 ```mermaid
----
-  config:
-    class:
-      hideEmptyMembersBox: true
----
+%%{
+  init: {
+    'theme': 'base',
+    'themeVariables': {
+      'primaryColor': '#fff4dd'
+    }
+  }
+}%%
+
+
 classDiagram
   direction DT
   note "the document"
