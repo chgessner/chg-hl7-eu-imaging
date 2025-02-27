@@ -12,15 +12,14 @@ Hello world!
 classDiagram
   direction DT
   note "the document"
+  note for Report "the report"
 
   class Finding { <<Observation>>}
-  note "the findings"
-  Report <-- Order: partOf
-  Report <-- Examination: partOf
-  Report <-- Key Images: partOf
+  Report <-- Order
+  Report *-- Examination
+  Report o-- Key Images: partOf
   
-  ProcedurePhase2 <-- ImagingSelection: extension[procedure]
-  ProcedurePhase2 <-- Finding: partOf
+  
 ```
 Goodbye.
 
