@@ -1,4 +1,23 @@
 
+# TEST: Logical Model (Domain Model?)
+
+Hello world!
+
+```mermaid
+classDiagram
+  direction DT
+
+  class Finding { <<Observation>>}
+  Report <-- Order: partOf
+  Report <-- Examination: partOf
+  Report <-- Key Images: partOf
+  
+  ProcedurePhase2 <-- ImagingSelection: extension[procedure]
+  ProcedurePhase2 <-- Finding: partOf
+```
+Goodbye.
+
+
 ### Procedure Phases
 
 Dataset A5.1.9 relates to the inclusion of additional procedure details. The description states: _"Additional information pertaining imaging procedure, such as imaging phase. e.g., without contrast, arterial phase, venous phase, delayed phase. Only some types of studies have phases."_
@@ -133,3 +152,6 @@ Findings will point to the `ImagingSelection` as normal.
 Although the different options all make sense in some way. The last option has the smallest impact on the model and does not require additional extensions.
 
 **CHOICE:** Procedure phases will be represented as `ImagingSelections`.
+
+
+
